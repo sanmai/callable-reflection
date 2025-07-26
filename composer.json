@@ -1,0 +1,38 @@
+{
+    "name": "sanmai/callable-reflection",
+    "description": "ReflectionFunctionAbstract for any callable",
+    "license": "Apache-2.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alexey Kopytko",
+            "email": "alexey@kopytko.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.47",
+        "friendsofphp/php-cs-fixer": "^3.84",
+        "infection/infection": "^0.30.3",
+        "phpunit/phpunit": "^11",
+        "sanmai/phpstan-rules": "^0.3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "CallableReflection\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CallableReflection\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true
+        }
+    }
+}
