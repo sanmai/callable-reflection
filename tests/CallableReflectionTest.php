@@ -63,6 +63,7 @@ class CallableReflectionTest extends TestCase
 
         $this->assertSame(1, $reflection->getNumberOfParameters());
         $this->assertSame('strlen', $reflection->getName());
+        $this->assertTrue($reflection->isInternal());
     }
 
     public function testStaticMethodString(): void
@@ -99,6 +100,7 @@ class CallableReflectionTest extends TestCase
         $reflection = $this->callableReflection->reflect($callable);
 
         $this->assertSame(1, $reflection->getNumberOfParameters());
+        $this->assertTrue($reflection->isInternal());
     }
 
     public function testFirstClassStaticMethod(): void
